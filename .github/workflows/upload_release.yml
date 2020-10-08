@@ -142,20 +142,20 @@ jobs:
         release-url: ${{ steps.create_release.outputs.upload_url }}
 
     - name: Publish arm_37 to PyPI
-      uses: pypa/gh-action-pypi-publish@v1.1.0
+      uses: pypa/gh-action-pypi-publish@v1.4.0
       with:
         user: __token__
         password: ${{ secrets.PYPI_TOKEN }}
         packages_dir: arm_37/
     - name: Publish arm_38 to PyPI
-      uses: pypa/gh-action-pypi-publish@v1.1.0
+      uses: pypa/gh-action-pypi-publish@v1.4.0
       with:
         user: __token__
         password: ${{ secrets.PYPI_TOKEN }}
         packages_dir: arm_38/
     #aarch64 not supported by pypi
     - name: Publish src to PyPI
-      uses: pypa/gh-action-pypi-publish@v1.1.0
+      uses: pypa/gh-action-pypi-publish@v1.4.0
       with:
         user: __token__
         password: ${{ secrets.PYPI_TOKEN }}
